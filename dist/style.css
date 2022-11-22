@@ -1,0 +1,28 @@
+:root{
+    --dark: rgb(177, 26, 26);
+    --light: rgb(235, 222, 222);
+}
+
+#navbar {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.card-header {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.container{
+    margin: 100px auto;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.card-body{
+    background-color: var(--light);
+    color: var(--dark);
+}
+.navbar-brand {
+    font-size: 50px;
+}
