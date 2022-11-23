@@ -52,28 +52,31 @@ const genEngineer = function(engineer){
 };
 
 genHTML = function(data){
-    cardArray = [];
+  pageArray = [];
     for (let i = 0; i < data.length; i++){
         const employee = data[i];
         const role = employee.getRole();
-    }
+    
     if(role === 'Manager'){
         const managerCard = genManager(employee);
-        cardArray.push(managerCard);
+        pageArray.push(managerCard);
     }
     if(role === 'Engineer'){
         const engineerCard = genEngineer(employee);
-        cardArray.push(engineerCard);
+        pageArray.push(engineerCard);
     
     }
     if(role === 'Intern'){
         const internCard = genIntern(employee);
-        cardArray.push(internCard);
+        pageArray.push(internCard);
+    }
+
+
+    const employeeCards = pageArray.join('')
+    const genTeam = genTeamPage(employeeCards);
+    return genTeam;
     }
 }
-
-const employeeCards = cardArray.join('');
-const genTeam = genTeamPage(employeeCards);
 
 const genTeamPage = function(employeeCards){
     `<!DOCTYPE html>
