@@ -18,3 +18,7 @@ test('GET EMAIL',() =>{
     expect(employee.getEmail()).toEqual('MHFU@gmail.com');
 });
 
+test('GET ROle',() =>{
+    const employee = new Employee('Ratholos', 579, 'MHFU@gmail.com');
+    expect(employee.getRole()).toEqual('Employee');
+});
